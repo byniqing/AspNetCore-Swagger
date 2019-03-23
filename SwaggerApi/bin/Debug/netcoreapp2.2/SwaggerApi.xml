@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SwaggerApi</name>
+    </assembly>
+    <members>
+        <member name="T:SwaggerApi.Controllers.v1.ManagerController">
+            <summary>
+            管理部门信息--V1
+            </summary>
+        </member>
+        <member name="M:SwaggerApi.Controllers.v1.ManagerController.GetStudents">
+            <summary>
+            获取所有数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SwaggerApi.Controllers.v1.ManagerController.QueryOrder(System.Int32,System.String)">
+            <summary>
+            测试
+            </summary>
+            <param name="id">id</param>
+            <param name="name">用户名</param>
+            <returns></returns>
+        </member>
+        <member name="T:SwaggerApi.Controllers.v2.ManagerController">
+            <summary>
+            管理部门信息--V2
+            </summary>
+        </member>
+        <member name="M:SwaggerApi.Controllers.v2.ManagerController.GetStudents">
+            <summary>
+            获取所有数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SwaggerApi.Controllers.v2.ManagerController.GetStudent(System.Int32)">
+            <summary>
+            获取参数
+            </summary>
+            <param name="id">主键Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:SwaggerApi.Controllers.v2.ManagerController.CreateAsync(SwaggerApi.Models.Student)">
+             <summary>
+             创建
+             </summary>
+             <remarks>
+             请求示例：
+                 POST /CreateAsync
+                 {
+                    "id": 0,
+                     "userName": "string",
+                     "age": 0
+                 }
+            
+             </remarks>
+             <param name="sutdent"></param>
+             <returns></returns>
+        </member>
+        <member name="M:SwaggerApi.Controllers.ValuesController.Get">
+            <summary>
+            获取参数
+            </summary>
+            <remarks>
+            GET api/values
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:SwaggerApi.Controllers.ValuesController.Delete(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:SwaggerApi.Models.Student.Id">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:SwaggerApi.Models.Student.UserName">
+            <summary>
+            用户姓名
+            </summary>
+            <example>示例</example>
+        </member>
+        <member name="P:SwaggerApi.Models.Student.Age">
+            <summary>
+            用户名年龄
+            </summary>
+        </member>
+        <member name="P:SwaggerApi.Models.Student.Gender">
+            <summary>
+            性别
+            <remarks>
+            0：男
+            1：女
+            2：其他
+            </remarks>
+            </summary>
+        </member>
+        <member name="F:SwaggerApi.Models.Gender.M">
+            <summary>
+            男
+            </summary>
+        </member>
+        <member name="F:SwaggerApi.Models.Gender.F">
+            <summary>
+            女
+            </summary>
+        </member>
+        <member name="F:SwaggerApi.Models.Gender.O">
+            <summary>
+            其他
+            </summary>
+        </member>
+        <member name="F:SwaggerApi.Startup.provider">
+            <summary>
+            Api版本提者信息，
+            依赖包：Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer
+            </summary>
+        </member>
+        <member name="M:SwaggerApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:SwaggerApi.SwaggerHelper.CustomApiVersion">
+            <summary>
+            自定义版本
+            </summary>
+        </member>
+        <member name="T:SwaggerApi.SwaggerHelper.CustomApiVersion.ApiVersions">
+            <summary>
+            Api接口版本 自定义
+            </summary>
+        </member>
+        <member name="F:SwaggerApi.SwaggerHelper.CustomApiVersion.ApiVersions.v1">
+            <summary>
+            v1 版本
+            </summary>
+        </member>
+        <member name="F:SwaggerApi.SwaggerHelper.CustomApiVersion.ApiVersions.v2">
+            <summary>
+            v2 版本
+            </summary>
+        </member>
+        <member name="T:SwaggerApi.SwaggerHelper.CustomRouteAttribute">
+            <summary>
+            自定义路由 /api/{version}/[controler]/[action]
+            </summary>
+        </member>
+        <member name="P:SwaggerApi.SwaggerHelper.CustomRouteAttribute.GroupName">
+            <summary>
+            分组名称,是来实现接口 IApiDescriptionGroupNameProvider
+            </summary>
+        </member>
+        <member name="M:SwaggerApi.SwaggerHelper.CustomRouteAttribute.#ctor(System.String)">
+            <summary>
+            自定义路由构造函数，继承基类路由
+            </summary>
+            <param name="actionName"></param>
+        </member>
+        <member name="M:SwaggerApi.SwaggerHelper.CustomRouteAttribute.#ctor(SwaggerApi.SwaggerHelper.CustomApiVersion.ApiVersions,System.String)">
+            <summary>
+            自定义版本+路由构造函数，继承基类路由
+            </summary>
+            <param name="actionName"></param>
+            <param name="version"></param>
+        </member>
+    </members>
+</doc>
